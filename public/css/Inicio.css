@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+}
+:root{
+    --Gris-oscuro:#222831;
+    --Gris-claro:#393E46;
+    --Amarillo:  #FFD369;
+    --Blanco:    #EEEEEE;
+}
+header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:var(--Gris-claro);
+    width: 100vw;
+    height: 13vh; 
+     
+}
+.header-logo img{
+    width: 100%;
+}
+.header-logo{
+    width: 130px;
+    height: 50px;
+    align-self: flex-start;
+    
+}
+header nav a{
+    text-decoration: none;
+    margin:0 25px;
+    padding-top: 20px;
+    color: var(--Blanco);
+    font-size: 20px;
+}
+
+main{
+    display: flex;
+    background:url(/img/pexels-lucie-liz-3165335\ \(1\).jpg);
+    background-size:cover;
+    background-repeat: no-repeat;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 50vh;
+    margin: 0;
+    
+}
+main picture img{
+    width: 100%;
+}
+
+main p{
+    display: inline-block;
+    color: azure;
+    width: 20%;
+}
+.iconos{
+    background-color:var(--Gris-claro) ;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    justify-content: space-around;
+    height: 26vh;
+    width: auto;
+}
+.iconos svg{
+    width: 100px;
+    height: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
+    
+    color: var(--Blanco);
+}
+.iconos .Control,.Bombilla,.Estampilla,.Personas{
+    max-width: 20rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content: center;
+}
+.Control-Contenido__titulo,.Bombilla-Contenido__titulo,.Estampilla-Contenido__titulo,.Personas-Contenido__titulo{
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #5fc5d9;
+    font-size: 1.5rem;
+    display: inline-flex;
+    align-items: center;
+}
+.Control-Contenido__descripcion,.Bombilla-Contenido__descripcion,.Estampilla-Contenido__descripcion,.Personas-Contenido__descripcion{
+    font-weight: 400;
+    color: var(--Blanco); 
+    font-size: 1.125rem;
+    line-height: 1.3333333333;
+}
+footer{
+    display: flex;
+    background-color: var(--Gris-oscuro);
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    height: 26vh;
+}
+.footer-img img{
+    width: 100%;
+}
+footer .footer-img{
+    height: 150px;
+    width: 150px;
+}
+footer p{
+    color: var(--Blanco);
+    font-size: 2rem;
+}
