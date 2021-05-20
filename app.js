@@ -1,7 +1,14 @@
 const express = require("express");
 const path = require('path');
 const bodyParser = require('body-parser');
+const morgan = require('morgan');
+const passport = require('passport');
+const flash = require('connect-flash');
+const session = require('express-session');
+
 const app = express();
+require('./passport/passport');
+require('./database');
 
 const routes = require('./routes/index');
 
@@ -18,6 +25,20 @@ app.use((req, res, next) => {
 });
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
+
+app.use(morgan('dev'));
+app.use(express.urlencoded({extended: false}));
+
+app.use(session({
+    secret: 'secret',
+    resave: true,
+    saveUninitialized: true
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use(flash());
 
 //routes
 app.use(routes);
