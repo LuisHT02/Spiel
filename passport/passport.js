@@ -3,15 +3,24 @@ const localStrategy = require('passport-local').Strategy;
 
 const user = require('../models/user');
 
+passport.serializeUser((user, done) => {
+    done(null, user.id);
+});
 
-passport.use(new localStrategy({
+passport.deserializeUser((id,done) =>{
+    user.findById(id, (err, user) =>{
+        done(err, user);
+    });
+});
+
+passport.use('Local-Login', new localStrategy({
     usernameField: 'email',
-    passwordField: 'contraseña'
-
+    passwordField: 'contraseña',
+    passReqToCallback: true
+    
 }, async(req, email,contraseña, done) => {
 
     //comprovar si el correo esta registrado
-
    const user = user.findOne(email)
    if(!user){
        return done(null, false, {message: 'usuario no existe'}); 
@@ -26,12 +35,3 @@ passport.use(new localStrategy({
    }
 }));
 
-passport.serializeUser((user, done) => {
-    done(null, user.id);
-});
-
-passport.deserializeUser((id,done) =>{
-    user.findById(id, (err, user) =>{
-        done(err, user);
-    });
-});

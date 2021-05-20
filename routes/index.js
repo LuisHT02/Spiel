@@ -44,10 +44,10 @@ router.get('/Login', (req,res,next) => {
     res.render('Login')
 });
 
-router.post('/Login', passport.authenticate('local',{
-    failureRedirect: '/Login',
+router.post('/Login', passport.authenticate('Local-Login',{
     successRedirect: '/VistaGeneral',
-    failureFlash: true
+    failureRedirect: '/Login',
+    passReqToCallback: true
 }));
 
 
