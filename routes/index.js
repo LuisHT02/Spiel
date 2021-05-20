@@ -44,11 +44,13 @@ router.get('/Login', (req,res,next) => {
     res.render('Login')
 });
 
-router.post('/Login', passport.authenticate('Local-Login',{
-    successRedirect: '/VistaGeneral',
-    failureRedirect: '/Login',
-    passReqToCallback: true
-}));
+router.post('/Login', (req,res,next) =>{
+     passport.authenticate('Local-Login',{
+        successRedirect: '/VistaGeneral',
+        failureRedirect: '/Login',
+        passReqToCallback: true
+    });
+});
 
 
 router.get('/Torneos', (req,res,next) => {

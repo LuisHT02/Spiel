@@ -17,13 +17,13 @@ passport.use('Local-Login', new localStrategy({
     usernameField: 'email',
     passwordField: 'contraseña',
     passReqToCallback: true
-    
-}, async(req, email,contraseña, done) => {
 
+}, async(req, email,contraseña, done) => {
+        console.log('prueba esta entrando');
     //comprovar si el correo esta registrado
-   const user = user.findOne(email)
+   const user = user.findOne({email})
    if(!user){
-       return done(null, false, {message: 'usuario no existe'}); 
+       return done(res.send('usuario no existe'), false, {message: 'usuario no existe'})
    }else{
       //validar contraseña
       const validar = await user.validarcontraseña(contraseña);
