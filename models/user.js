@@ -14,7 +14,7 @@ userSchema.methods.encriptarcontraseña = (contraseña) => {
     return bcrypt.hashSync(contraseña, bcrypt.genSaltSync(10));
 };
 
-userSchema.methods.validarcontraseña = function(contraseña) {
+userSchema.methods.validar = function(contraseña) {
     return bcrypt.compareSync(contraseña, this.contraseña);
 }
 

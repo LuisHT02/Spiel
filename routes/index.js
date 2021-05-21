@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const passport = require('passport');
-
+const bcrypt = require('bcrypt-nodejs');
+const user = require('../models/user');
 
 router.get('/', (req, res) => {
     res.render('index')
@@ -12,7 +13,7 @@ router.get('/index', (req, res) => {
 });
 
 //Registro de usuarios
-const user = require('../models/user');
+
 
 router.get('/Register', (req,res,next) => {
     res.render('Register')
@@ -20,6 +21,7 @@ router.get('/Register', (req,res,next) => {
 
 router.post('/Register', async(req,res) => {
     const {email, contraseña, confirmarcontraseña, username, pais, Telefono} = req.body;
+    console.log(req.body);
     if(contraseña != confirmarcontraseña){
         res.send('Las contraseñas no coinciden');
     } 
@@ -40,18 +42,16 @@ router.post('/Register', async(req,res) => {
 });
 
 //Login usuraio
-router.get('/Login', (req,res,next) => {
+
+router.get('/Login', (req,res) => {
     res.render('Login')
 });
 
-router.post('/Login', (req,res,next) =>{
-     passport.authenticate('Local-Login',{
-        successRedirect: '/VistaGeneral',
-        failureRedirect: '/Login',
-        passReqToCallback: true
-    });
-});
-
+router.post('/Login', passport.authenticate('local-Login', {
+    successRedirect: '/VistaGeneral',
+    failureRedirect: '/Login',
+    passReqToCallback: true
+}));
 
 router.get('/Torneos', (req,res,next) => {
     res.render('Torneos')
@@ -59,9 +59,12 @@ router.get('/Torneos', (req,res,next) => {
 
 
 
-router.get('/ActualizarPerfil', (req,res,next) => {
-    res.render('ActualizarPerfil')
+router.get('/VistaGeneral', (req,res,next) => {
+    res.render('VistaGeneral')
 });
+
+
+
 
 
 module.exports = router;
