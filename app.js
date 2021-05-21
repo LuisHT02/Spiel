@@ -39,6 +39,10 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use((req, res,next) =>{
+    app.locals.LoginMessage = req.flash('Loginmessage');
+    next();
+});
 
 
 //routes

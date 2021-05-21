@@ -20,10 +20,10 @@ passport.use('local-Login', new localStrategy({
 }, async(req,email, contraseña, done) =>{
    const user = await User.findOne({email: email});
    if(!user){
-        return done(null,false, req.flash('Login message', 'Correo no valido'));
+        return done(null,false, req.flash('Loginmessage', 'Correo no valido'));
     }
     if(!user.validar(contraseña)){
-        return done(null, false, res.send('Contraseña incorrecta'));
+        return done(null, false, req.flash('Loginmessage', 'Contraseña no valida'));
     }
     done(null,user);
 }));

@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +9,14 @@
     <link rel="stylesheet" href="/css/Register.css">
     <title>Registro</title>
 </head>
+     
 </body>
     <div class="container">
             <Picture><img src="./img/logo2.png" alt="Logo de nuestra empresa de torneos"></Picture>
        <div  class="Formulario-Login">
+        <% if (LoginMessage) {
+            <div><%= LoginMessage %></div>
+        } %>
             <form action="/Register" method="POST">
                     <label for="email">
                     <input type="email" name="email" placeholder="Email" autocomplete="email" required>
@@ -36,5 +42,6 @@
             
         </div>
     </div>
+      
 </body>
 </html>
