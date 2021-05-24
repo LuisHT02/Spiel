@@ -38,9 +38,13 @@ app.use(session({
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
-
 app.use((req, res,next) =>{
-    app.locals.LoginMessage = req.flash('Loginmessage');
+    app.locals.Loginmessage = req.flash('Loginmessage');
+    app.locals.Registermessage = req.flash('Registermessage');
+    next();
+});
+app.use((req, res,next) =>{
+    app.locals.Registermessage = req.flash('Registermessage');
     next();
 });
 

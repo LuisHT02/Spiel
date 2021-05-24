@@ -19,11 +19,11 @@ router.get('/Register', (req,res,next) => {
     res.render('Register')
 });
 
-router.post('/Register', async(req,res) => {
+router.post('/Register', async(req,res, done) => {
     const {email, contraseña, confirmarcontraseña, username, pais, Telefono} = req.body;
     console.log(req.body);
     if(contraseña != confirmarcontraseña){
-        res.send('Las contraseñas no coinciden');
+        return done(null, req.flash('Registermessage','Las contraseñas no coinciden'));
     } 
     if(contraseña.length < 8){
         res.send('La contraseña debe ser minimo de 8 caracteres');

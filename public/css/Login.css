@@ -59,3 +59,10 @@ form .boton{
     color: var(--Blanco);
     
 }
+.alerta{
+    color: var(--Blanco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: medium;
+}

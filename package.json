@@ -24,6 +24,7 @@
     "morgan": "^1.10.0",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",
+    "sweetalert": "^2.1.2",
     "sweetalert2": "^11.0.8"
   },
   "devDependencies": {
