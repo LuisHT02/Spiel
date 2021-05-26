@@ -63,5 +63,12 @@ form label{
     margin-bottom:1rem ;
     background-color: var(--Amarillo);
     color: var(--Blanco);
-    
+}
+
+.alerta{
+    color: var(--Blanco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: medium;
 }

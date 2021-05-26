@@ -21,16 +21,15 @@ router.get('/Register', (req,res,next) => {
 
 router.post('/Register', async(req,res, done) => {
     const {email, contraseña, confirmarcontraseña, username, pais, Telefono} = req.body;
-    console.log(req.body);
     if(contraseña != confirmarcontraseña){
-        return done(null, req.flash('Registermessage','Las contraseñas no coinciden'));
+        return req.flash('Registermessage', 'Las contraseñas no coinciden'), res.redirect('/Register');
     } 
     if(contraseña.length < 8){
-        res.send('La contraseña debe ser minimo de 8 caracteres');
+        return req.flash('Registermessage', 'La contraseña debe ser minimo de 8 caracteres'), res.redirect('/Register');
     }else{
        const emailuser = await user.findOne({email: email});
        if(emailuser){
-        res.send('El email ya esta registrado');
+        return req.flash('Registermessage', 'El email ya esta registrado'), res.redirect('/Register');
        }else{
            const newUser = new user({email, contraseña, username, pais, Telefono});
            newUser.contraseña = await newUser.encriptarcontraseña(contraseña);

@@ -13,6 +13,8 @@ passport.deserializeUser((id,done) =>{
     });
 });
 
+//Autenticacion login
+
 passport.use('local-Login', new localStrategy({
     usernameField: 'email',
     passwordField: 'contraseña',
