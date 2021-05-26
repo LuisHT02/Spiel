@@ -5,6 +5,7 @@
 }
 html{
     font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
 }
 :root{
     --Gris-oscuro:#222831;
@@ -30,28 +31,95 @@ header{
     align-self: flex-start;
     
 }
+header nav {
+    height: 100%;
+    display: flex;
+}
 header nav a{
+    display: flex;
+    align-items: center;
+    align-self: center;
     text-decoration: none;
     margin:0 25px;
-    padding-top: 20px;
     color: var(--Blanco);
     font-size: 20px;
+    height: 100%;
+    padding: 0 10px;
+}
+header nav a:hover{
+    background-color: var(--Gris-claro);
 }
 main{
     background-color: var(--Gris-claro);
     display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
 }
-main .main-imagen-perfil img{
+main .tabla-contenidos-imagen img{
     width: 100%; 
     border-radius: 300px;
 }
-main .main-imagen-perfil{
+main .tabla-contenidos-imagen{
     width: 200px;
     height: 200px;
 }
-main .main-tabla-contenido{
+main .tabla-contenido{
     background-color:var(--Blanco);
     width: 600px;
-    height: 400px;
-    justify-self:center;
+    height: 500px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    font-family: 'Farro', sans-serif;
+}
+main .tabla-contenido div{
+    margin: 10px 0;
+}
+main .tabla-contenido-datos{
+    border-collapse: collapse;
+    border:2px solid  var(--Gris-oscuro);
+}
+main .tabla-contenido-datos table th,td{
+    padding: 20px 20px 10px 50px;   
+}
+main .main-buttons{
+    align-self: center;
+}
+main .main-buttons div{
+    background-color: var(--Amarillo);
+    margin-top: 10px;
+    justify-content: center;
+    align-content: center;
+}
+main .main-buttons div button{
+    border-style: none;
+    background-color: var(--Amarillo);
+    font:bold;   
+    padding: 20px 52px;
+    display: inline-block;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+main .main-buttons div button:hover{
+    background-color: white;
+}
+footer{
+    display: flex;
+    background-color: var(--Gris-oscuro);
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    height: 26vh;
+}
+.footer-img img{
+    width: 100%;
+}
+footer .footer-img{
+    height: 150px;
+    width: 150px;
+}
+footer p{
+    color: var(--Blanco);
+    font-size: 2rem;
 }
