@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/ActualizarPerfil.css">
+    <link rel="stylesheet" href="../public/css/ActualizarPerfil.css">
     <title>Actualizar perfil</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300;500;700&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <header> <div class="header-logo"><img src="./img/logo2.png" alt=""></div>
+    <header> <div class="header-logo"><img src="../public/img/logo2.png" alt=""></div>
         <nav>
             <a href="Login">Iniciar sesion</a>
             <a href= "Register">Registrarse</a>
@@ -18,13 +21,11 @@
         </nav>
     </header>
     <main>
-        <section class="main-imagen-perfil">
-            <img src="./img/Foto de perfil.jpg" alt="Foto de perfil usuario">
-        </section>
-        <section class="main-tabla-contenido">
+        <section class="tabla-contenido">
+            <div class="tabla-contenidos-imagen"><img src="../public/img/Foto de perfil.jpg" alt="Foto de perfil usuario"></div>
             <div class="tabla-contenidos-titulo"><h1>Vista general</h1></div>
             <div class="tabla-contenidos-titulosecundario"><h2>Perfil</h2></div>
-            <div class="tabla-contenido">   
+            <div class="tabla-contenido-datos">   
                 <table>
                 <tr>
                     <th>Nombre</th>
@@ -43,7 +44,7 @@
                     <td>Colombia</td>
                 </tr>
                 </table>
-        </div>
+             </div>
         </section>
         <section class="main-buttons">
             <div>
@@ -57,5 +58,11 @@
             </div>
         </section>
     </main>
+    <footer>
+        <picture class="footer-img"><img src="../public/img/logo2.png" alt="Spiel" title="Spiel"></picture>     
+            <p>contacto.clientes@spiel.com</p>
+            <p>3174809715</p>
+            <p> © Copyright 2020</p>
+    </footer>
 </body>
 </html>
