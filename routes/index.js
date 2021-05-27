@@ -56,11 +56,24 @@ router.get('/Torneos', (req,res,next) => {
     res.render('Torneos')
 });
 
+router.get('/VistaGeneral', async(req,res) => {
+     res.render('VistaGeneral');
+ }); 
 
-
-router.get('/VistaGeneral', (req,res,next) => {
-    res.render('VistaGeneral')
-});
+ router.post('/VistaGeneral', async(req,res) => {
+    const Email = req.body.email;
+    const usuario = await user.findOne({email: Email});
+    const username = usuario.username;
+    const email = usuario.email;
+    const telefono = usuario.Telefono;
+    const pais = usuario.pais;
+    res.render('VistaGeneral',{
+        username,
+        email,
+        telefono,
+        pais
+    });
+}); 
 
 
 

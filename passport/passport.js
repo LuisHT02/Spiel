@@ -30,4 +30,6 @@ passport.use('local-Login', new localStrategy({
     done(null,user);
 }));
 
+
+
 module.exports = passport;
