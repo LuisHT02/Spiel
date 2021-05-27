@@ -2,6 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Farro', sans-serif;
 }
 html{
     font-size: 62.5%;
@@ -30,22 +31,33 @@ header{
     align-self: flex-start;
     
 }
+header nav {
+    height: 100%;
+    display: flex;
+}
 header nav a{
+    display: flex;
+    align-items: center;
+    align-self: center;
     text-decoration: none;
     margin:0 25px;
-    padding-top: 20px;
     color: var(--Blanco);
     font-size: 20px;
+    height: 100%;
+    padding: 0 10px;
+}
+header nav a:hover{
+    background-color: var(--Gris-claro);
 }
 main{
     display: flex;
-    background-image: url(/img/Fondo\ torneos\ mediana.jpg);
+    background-image: url(../img/Fondo\ torneos\ mediana.jpg);
     background-size:100% 100%;
     background-repeat: no-repeat;
     background-position: center center;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 100vw;
     height: 60vh;
 }
 main div{
@@ -62,11 +74,26 @@ main button{
     height: 5vh;
     margin-bottom:1rem ;
     background-color: var(--Amarillo);
-    color: var(--Blanco);
 }
 main button a{
     text-decoration: none;
-    color: var(--Blanco);
+    color: var(--Gris-claro);
+}
+main button:hover{
+    background: #f9db4a;
+    color: #ffff75;
+    border: 3px solid #ffff75;
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease;
+}
+main button:hover >a{
+    color: var(--Gris-claro);
+    -webkit-transition: all 0.35s ease;
+    transition: all 0.35s ease; 
+}
+main button:active{
+    -webkit-transform: translate(5px, 5px);
+    transform: translate(5px, 5px);
 }
 footer{
     display: flex;
@@ -74,17 +101,19 @@ footer{
     justify-items: center;
     align-items: center;
     flex-direction: column;
-    height: 28vh;
-
+    height: 27vh;
+    width: 100vw;
+    
 }
 .footer-img img{
     width: 100%;
 }
 footer .footer-img{
-    height: 150px;
+    height: 100px;
     width: 150px;
 }
 footer p{
     color: var(--Blanco);
-    font-size: 2rem;
+    font-size: 1.3rem;
+    margin:2px 0px;
 }

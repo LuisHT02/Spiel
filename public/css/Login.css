@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Farro', sans-serif;
 }
 html{
     font-size: 62.5%;
@@ -56,7 +57,7 @@ form .boton{
     height: 5vh;
     margin-top: 2rem;
     background-color: var(--Amarillo);
-    color: var(--Blanco);
+    color: var(--Gris-claro);
     
 }
 .alerta{
