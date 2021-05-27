@@ -162,8 +162,9 @@ main .main-buttons div{
     margin-top: 10px;
     justify-content: center;
     align-content: center;
+    display: flex;
 }
-main .main-buttons div button{
+main .main-buttons div a{
     border-style: none;
     background-color: var(--Amarillo);
     font:bold;   
@@ -171,16 +172,17 @@ main .main-buttons div button{
     display: inline-block;
     width: 100%;
     font-family: 'Roboto', sans-serif;
-}
-main .main-buttons div button a{
     text-decoration: none;
     color: var(--Gris-claro);
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
-main .main-buttons div button a:hover{
+main .main-buttons div a:hover{
+    background-color: #ecab0f;
+    cursor: pointer;
     color: var(--Gris-oscuro);
-}
-main .main-buttons div button:hover{
-   background-color: #ffff75;
 }
 footer{
     display: flex;
@@ -188,17 +190,19 @@ footer{
     justify-items: center;
     align-items: center;
     flex-direction: column;
-    height: 28vh;
+    height: 26vh;
     width: 100vw;
+    
 }
 .footer-img img{
     width: 100%;
 }
 footer .footer-img{
-    height: 150px;
+    height: 100px;
     width: 150px;
 }
 footer p{
     color: var(--Blanco);
-    font-size: 2rem;
+    font-size: 1.3rem;
+    margin:2px 0px;
 }

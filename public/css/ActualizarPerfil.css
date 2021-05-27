@@ -54,6 +54,7 @@ main{
     display: flex;
     justify-content: center;
     flex-direction: row-reverse;
+    width: 100vw;
 }
 main .tabla-contenidos-imagen img{
     width: 100%; 
@@ -72,16 +73,23 @@ main .tabla-contenido{
     align-items: center;
     margin: 20px 0;
     font-family: 'Farro', sans-serif;
+    border-radius: 4px;
 }
 main .tabla-contenido div{
-    margin: 10px 0;
+    margin: 5px 0;
+}
+main .tabla-contenidos-titulosecundario{
+    align-self: flex-start;
+    padding-left: 90px;
+    margin-left: 400px;
 }
 main .tabla-contenido-datos{
     border-collapse: collapse;
     border:2px solid  var(--Gris-oscuro);
+    font-size: 1.2rem;
 }
 main .tabla-contenido-datos table th,td{
-    padding: 20px 20px 10px 50px;   
+    padding: 26px 20px 10px 50px;   
 }
 main .main-buttons{
     align-self: center;
@@ -91,8 +99,9 @@ main .main-buttons div{
     margin-top: 10px;
     justify-content: center;
     align-content: center;
+    display: flex;
 }
-main .main-buttons div button{
+main .main-buttons div a{
     border-style: none;
     background-color: var(--Amarillo);
     font:bold;   
@@ -100,9 +109,17 @@ main .main-buttons div button{
     display: inline-block;
     width: 100%;
     font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    color: var(--Gris-claro);
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
-main .main-buttons div button:hover{
-    background-color: white;
+main .main-buttons div a:hover{
+    background-color: #ecab0f;
+    cursor: pointer;
+    color: var(--Gris-oscuro);
 }
 footer{
     display: flex;
@@ -111,15 +128,18 @@ footer{
     align-items: center;
     flex-direction: column;
     height: 26vh;
+    width: 100vw;
+    
 }
 .footer-img img{
     width: 100%;
 }
 footer .footer-img{
-    height: 150px;
+    height: 100px;
     width: 150px;
 }
 footer p{
     color: var(--Blanco);
-    font-size: 2rem;
+    font-size: 1.3rem;
+    margin:2px 0px;
 }
