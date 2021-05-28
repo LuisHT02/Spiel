@@ -20,7 +20,6 @@ header{
     background-color:var(--Gris-oscuro);
     width: 100vw;
     height: 13vh; 
-     
 }
 .header-logo img{
     width: 100%;
@@ -79,81 +78,76 @@ main .tabla-contenido div{
     margin: 10px 0;
 }
 main .tabla-contenido-titulo{
-    font-size:x-large
+    font-size:x-large;
 }
 main .tabla-contenido-datos{
-    width: 100%;
-}
-main .tabla-contenido-datos form{
     display: flex;
-    flex-direction: column;
-    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
-main .tabla-contenido-datos form div{
-    display: flex;
-    flex-direction: column;
-    margin: 10px 40px;
+main .tabla-contenido-datos table {
+    border: solid 2px var(--Gris-claro);
+    padding: 10px;
+    margin: 20px 40px;
+    border-radius: 10px;
+    background-color:var(--Gris-claro);
+    color: var(--Blanco);
+    -webkit-box-shadow: 0px 4px 15px -2px #000000; 
+    box-shadow: 0px 4px 15px -2px #000000;
+    font-size: 1.2rem;
 }
-main .tabla-contenido-datos form div span{
-    margin-bottom: 10px;
-    font-size: 11px;
+main .tabla-contenido-datos .Juju{
+    padding:0px 16px;
 }
-main .tabla-contenido-datos form div label{
-    appearance: none;
+main .tabla-contenido-datos .Boquita{
+    padding:8px 13px;
 }
-main .tabla-contenido-datos form div label input{
-    width: 100%;
-    height: 30px;
-    border-radius: 5px;
-    cursor: pointer;
+main .tabla-contenido-datos .millos{
+    padding:5px 16px;
 }
-main .tabla-contenido-datos form div select{
-    appearance: none;
-    height: 30px;
-    border-radius:5px;
-    cursor: pointer;
+main .tabla-contenido-datos table th,td{
+    padding: 8px;
 }
-main .tabla-contenido form .Botones-edit{
-    flex-direction: row-reverse;
+main table tr td .junior{
+    display: inline-block;
+    background-image: url('../img/atletico-junior-logo.png');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
 }
-main .tabla-contenido form .Botones-edit .save{
-    background-color: var(--Amarillo);
-    border-radius: 4rem;
-    width: 10vw;
-    height: 5vh;
-    align-self: flex-end;
-    color: var(--Gris-claro);
-    font-family: 'Roboto', sans-serif;
-    border:none;
-    font-size: 18px;
-    margin-left: 30px;
-    cursor: pointer;
+main table tr td .Santafe{
+    display: inline-block;
+    background-image: url('../img/santafe.png');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
 }
-main .tabla-contenido form .Botones-edit a{
-    background-color:transparent;
-    border-radius: 4rem;
-    width: 10vw;
-    height: 5vh;
-    align-self: flex-end;
-    text-decoration: none;
-    color: var(--Gris-claro);
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 19px;
+main table tr td .Boca{
+    display: inline-block;
+    background-image: url('../img/boca.png');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
 }
-main .tabla-contenido form .Botones-edit .save:hover{
-    font-size: 20px;
-    color: var(--Gris-oscuro);
-    width: 140px;
-    height: 30px;
-}
-main .tabla-contenido form .Botones-edit a:hover{
-    font-size: 20px;
-    color: var(--Gris-oscuro);
-    width: 140px;
-    height: 30px;
+main table tr td .Millonarios{
+    display: inline-block;
+    background-image: url('../img/Millonarios-icon.png');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: contain;
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
 }
 main .main-buttons{
     align-self: center;

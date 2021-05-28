@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Farro', sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+:root{
+    --Gris-oscuro:#222831;
+    --Gris-claro:#393E46;
+    --Amarillo:  #FFD369;
+    --Blanco:    #EEEEEE;
+}
+header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color:var(--Gris-oscuro);
+    width: 100vw;
+    height: 13vh; 
+     
+}
+.header-logo img{
+    width: 100%;
+}
+.header-logo{
+    width: 130px;
+    height: 50px;
+    align-self: flex-start;
+    
+}
+header nav {
+    height: 100%;
+    display: flex;
+}
+header nav a{
+    display: flex;
+    align-items: center;
+    align-self: center;
+    text-decoration: none;
+    margin:0 25px;
+    color: var(--Blanco);
+    font-size: 20px;
+    height: 100%;
+    padding: 0 10px;
+}
+header nav a:hover{
+    background-color: var(--Gris-claro);
+}
+main{
+    display: flex;
+    background-color: var(--Gris-claro);
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 60vh;
+    flex-direction: column;
+}
+main h1{
+    font-weight: bold;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: var(--Blanco);
+}
+main div{
+    display: flex;
+}
+main section{
+    /* background-color:var(--Gris-oscuro); */
+    height: 30vh;
+    width: 267px;
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    flex-direction: column;
+    margin-bottom: 80px;
+}
+main section picture img{
+    width: 100%;
+    border-radius:10px;
+    margin-bottom: 28px;
+}
+main .Overwatch picture img{
+    height: 150px;
+   
+}
+main .Dota picture img{
+    height: 150px;
+}
+main section div{
+    font-family: 'Roboto', sans-serif;
+    color: var(--Blanco);
+    font-size: 1.2rem;
+}
+footer{
+    display: flex;
+    background-color: var(--Gris-oscuro);
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    height: 27vh;
+    width: 100vw;
+    
+}
+.footer-img img{
+    width: 100%;
+}
+footer .footer-img{
+    height: 100px;
+    width: 150px;
+}
+footer p{
+    color: var(--Blanco);
+    font-size: 1.3rem;
+    margin:2px 0px;
+}
