@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/Editarperfil.css">
+    <link rel="stylesheet" href="./css/Editarperfil.css">
     <title>Actualizar perfil</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300;500;700&family=Roboto:wght@300;500;700&display=swap" rel="stylesheet"> 
 </head>
 <body>
-    <header> <div class="header-logo"><img src="../public/img/logo2.png" alt=""></div>
+    <header> <div class="header-logo"><img src="./img/logo2.png" alt=""></div>
         <nav>
             <a href="index">Inicio</a>
             <a href= "Torneos">Torneos</a>
@@ -22,60 +22,53 @@
         <section class="tabla-contenido">
             <div class="tabla-contenido-titulo"><h1>Editar perfil</h1></div>
             <div class="tabla-contenido-datos">
-                <form action="">
+                <form action="/Editarperfil" method="POST">
                     <div class="correo">
-                        <span>Correo electrónico</span>
+                        <span>Correo electrónico </span>
                         <label for="email">
-                            <input type="email" id=email>
+                            <input type="email" name="email" required>
                         </label>
                     </div>
                     <div class="nickname">
                         <span>Nickname</span>
-                        <label for="nickname">
-                            <input type="text" id=nickname>
+                        <label for="username">
+                            <input type="text" name="username" required>
                         </label>
                     </div>
-                    <div class="Sexo">
-                        <span>Sexo</span>
-                        <select name="sexo" id="sexo">
-                            <option value="Masculino">Masculino</option>
-                            <option value="Femenino">Femenino</option>
-                            <option value="No binario">No binario</option>
-                        </select>
-                    </div>
+    
                     <div class="numero-telefonico">
                         <span>Telefono</span>
                         <label for="telefono">
-                            <input type="number" id="telefono">
+                            <input type="number" name="telefono" required>
                         </label>
                     </div>
                     <div class="pais">
                         <span>País</span>
                         <label for="pais">  
-                            <input type="text">
+                            <input type="text" name="pais" required>
                         </label>
                     </div>
                     <div class="Botones-edit">
                     <input type="submit" value="Guardar" class="save">
-                    <a href="VistaGeneral.html" type="botton">Cancelar</a>
+                    <a href="VistaGeneral" type="botton">Cancelar</a>
                     </div>
                 </form>
             </div>
         </section>
         <section class="main-buttons">
             <div>
-                <a href="VistaGeneral.html">Vista general</a>
+                <a href="VistaGeneral">Vista general</a>
             </div>
             <div>
-                <a href="Editarperfil.html">Editar perfil</a>
+                <a href="Editarperfil">Editar perfil</a>
             </div>
             <div>
-                <a href="Vertorneos.html">Ver mis torneos</a>
+                <a href="#">Ver mis torneos</a>
             </div>
         </section>
     </main>
     <footer>
-        <picture class="footer-img"><img src="../public/img/logo2.png" alt="Spiel" title="Spiel"></picture>     
+        <picture class="footer-img"><img src="./img/logo2.png" alt="Spiel" title="Spiel"></picture>     
             <p>contacto.clientes@spiel.com</p>
             <p>3174809715</p>
             <p> © Copyright 2020</p>

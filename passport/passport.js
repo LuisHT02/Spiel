@@ -27,6 +27,7 @@ passport.use('local-Login', new localStrategy({
     if(!user.validar(contraseña)){
         return done(null, false, req.flash('Loginmessage', 'Contraseña no valida'));
     }
+    req.session.usersession = user._id;
     done(null,user);
 }));
 

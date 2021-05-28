@@ -57,13 +57,9 @@ router.get('/Torneos', (req,res,next) => {
 });
 
 router.get('/VistaGeneral', async(req,res) => {
-     res.render('VistaGeneral');
- }); 
-
- router.post('/VistaGeneral', async(req,res) => {
-    const Email = req.body.email;
-    const usuario = await user.findOne({email: Email});
-    const username = usuario.username;
+    const usersession = req.session.usersession;
+   const usuario = await user.findById(usersession);
+   const username = usuario.username;
     const email = usuario.email;
     const telefono = usuario.Telefono;
     const pais = usuario.pais;
@@ -72,10 +68,31 @@ router.get('/VistaGeneral', async(req,res) => {
         email,
         telefono,
         pais
-    });
+    }); 
+ }); 
+
+
+router.get('/Editarperfil', async(req,res) => {
+    res.render('Editarperfil');
 }); 
 
+router.post('/Editarperfil', async(req,res) => {
+   const usersession = req.session.usersession;
+   const usuario = await user.findById(usersession);
+   const emailactual = usuario.email;
+   const {email, username, pais, telefono} = req.body;
+    const actualizar = await user.updateOne({
+        email: emailactual
+    },
+    {
+        email: email,
+        username: username,
+        Telefono: telefono,
+        pais: pais
+    });
 
+    res.redirect('/VistaGeneral');
+});
 
 
 
