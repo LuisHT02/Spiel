@@ -78,11 +78,7 @@ main .tabla-contenido{
 main .tabla-contenido div{
     margin: 5px 0;
 }
-main .tabla-contenidos-titulosecundario{
-    align-self: flex-start;
-    padding-left: 90px;
-    margin-left: 400px;
-}
+
 main .tabla-contenido-datos{
     border-collapse: collapse;
     border:2px solid  var(--Gris-oscuro);

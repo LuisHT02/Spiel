@@ -95,5 +95,13 @@ router.post('/Editarperfil', async(req,res) => {
 });
 
 
+router.get('/Juegos', (req,res) => {
+    res.render('Juegos');
+});
+
+
+router.get('/Vertorneos', (req,res) => {
+    res.render('Vertorneos');
+});
 
 module.exports = router;

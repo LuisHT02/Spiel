@@ -111,7 +111,7 @@ main .tabla-contenido-datos table th,td{
 }
 main table tr td .junior{
     display: inline-block;
-    background-image: url('../img/atletico-junior-logo.png');
+    background-image: url('/img/atletico-junior-logo.png');
     background-repeat: no-repeat;
     background-position:center;
     background-size: contain;
@@ -121,7 +121,7 @@ main table tr td .junior{
 }
 main table tr td .Santafe{
     display: inline-block;
-    background-image: url('../img/santafe.png');
+    background-image: url('/img/santafe.png');
     background-repeat: no-repeat;
     background-position:center;
     background-size: contain;
@@ -131,7 +131,7 @@ main table tr td .Santafe{
 }
 main table tr td .Boca{
     display: inline-block;
-    background-image: url('../img/boca.png');
+    background-image: url('/img/boca.png');
     background-repeat: no-repeat;
     background-position:center;
     background-size: contain;
@@ -141,7 +141,7 @@ main table tr td .Boca{
 }
 main table tr td .Millonarios{
     display: inline-block;
-    background-image: url('../img/Millonarios-icon.png');
+    background-image: url('/img/Millonarios-icon.png');
     background-repeat: no-repeat;
     background-position:center;
     background-size: contain;

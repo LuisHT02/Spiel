@@ -115,6 +115,7 @@ main .tabla-contenido-datos form div select{
 }
 main .tabla-contenido form .Botones-edit{
     flex-direction: row-reverse;
+    margin-top: 30px;
 }
 main .tabla-contenido form .Botones-edit .save{
     background-color: var(--Amarillo);
